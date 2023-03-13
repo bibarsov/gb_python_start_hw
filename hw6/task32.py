@@ -10,5 +10,5 @@ right: int = int(input())
 
 arr = [random.randint(10) for _ in range(10)]
 print(*arr)
-arr = {i for i in arr if left <= i <= right}
+arr = {index for index, value in enumerate(arr) if left <= value <= right}
 print(*arr)
