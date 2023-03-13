@@ -3,7 +3,7 @@
 # Будем считать, что на вход подается только одно слово, которое содержит либо
 # только английские, либо только русские буквы.
 
-en_dict = {
+letters_value_dict = {
     "A": 1,
     "E": 1,
     "I": 1,
@@ -29,9 +29,7 @@ en_dict = {
     "J": 8,
     "X": 8,
     "Q": 10,
-    "Z": 10
-}
-ru_dict = {
+    "Z": 10,
     "А": 1,
     "В": 1,
     "Е": 1,
@@ -69,11 +67,8 @@ ru_dict = {
 
 word = input().upper()
 value = 0
-if word[0] in ru_dict:
-    for symbol in word:
-        value += ru_dict[symbol]
-else:
-    for symbol in word:
-        value += en_dict[symbol]
+
+for letter in word:
+    value += letters_value_dict[letter]
 
 print(value)
