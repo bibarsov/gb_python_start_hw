@@ -8,7 +8,7 @@ A = 3; B = 5 -> 243 (3⁵)
 
 
 def pow_num(num, power):
-    if power <= 0:
+    if power == 0:
         return 1
     return num * pow(num, power - 1)
 

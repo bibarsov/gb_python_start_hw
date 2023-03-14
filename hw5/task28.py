@@ -14,9 +14,9 @@ def summ(n1, n2):
     if n1 == 0 and n2 == 0:
         return 0
     elif n1 == 0:
-        return summ(n1, n2 - 1) + 1
+        return n2
     elif n2 == 0:
-        return summ(n1 - 1, n2) + 1
+        return n1
     return summ(n1 - 1, n2 - 1) + 1 + 1
 
 
